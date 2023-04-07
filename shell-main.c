@@ -115,6 +115,19 @@ void execute_command(char **args) {
                 printf("%s\n", str);
             }
             exit(1);
+        } else if (strcmp(args[0], "art") == 0) {
+        // To execute this programm you should have .jpg file in derictory
+        // witch will be same as for shell-main.c (or type PATH to .jpg 
+        // like: /Users/username/myshellProj/burch.jpg). 
+        // If you have problem just install (sudo port install jp2a) to your computer
+        if (args[1] != NULL) { // Check if directory argument provided
+                execlp("jp2a", "jp2a", "--colors", args[1], NULL); // Call "jp2a" command with provided argument
+                perror("jp2a"); 
+                exit(1);
+            } else {
+                printf("No file provided for 'jp2a'\n");
+                exit(1);
+            }
         } else {
             execvp(args[0], args);
             printf("Command not found: %s\n", args[0]);
