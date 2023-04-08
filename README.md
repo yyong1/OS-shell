@@ -1,5 +1,5 @@
 # OS-shell
-Project of basic shell implementation
+Project of basic shell implementation by Andrey Baranov
 
 <h1>Project: Shell</h1>
 
