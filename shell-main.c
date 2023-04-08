@@ -116,10 +116,11 @@ void execute_command(char **args) {
             }
             exit(1);
         } else if (strcmp(args[0], "art") == 0) {
-        // To execute this programm you should have .jpg file in derictory
-        // witch will be same as for shell-main.c (or type PATH to .jpg 
-        // like: /Users/username/myshellProj/burch.jpg). 
-        // If you have problem just install (sudo port install jp2a) to your computer
+        // Task 1.2 has implemented all of the basic functions (cd, mv, du, date, rev) 
+        // as well as an additional "art" command. To execute the "art" command, you should have 
+        // a .jpg file in the same directory as shell-main.c (or type the path to the .jpg file 
+        // like /Users/username/myshellProj/burch.jpg). If you encounter any issues, simply 
+        // install jp2a to your computer using the command "sudo port install jp2a".
         if (args[1] != NULL) { // Check if directory argument provided
                 execlp("jp2a", "jp2a", "--colors", args[1], NULL); // Call "jp2a" command with provided argument
                 perror("jp2a"); 

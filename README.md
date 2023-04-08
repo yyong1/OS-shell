@@ -1,5 +1,5 @@
 # OS-shell
-Project of basic shell implementation (Andrei Baranov & Tarik Kovacevic)
+Project of basic shell implementation
 
 <h1>Project: Shell</h1>
 
@@ -32,11 +32,19 @@ execvpe().
 
 Task 1.4: Add some colors to your shell 
 
-COMMENTS:
+Task 1.5: Provide a concise and descriptive answer to the following questions.
+Q1: What is the purpose of the fork() system call?
+Q2: Explain the following code snippet and write down the list of process state transitions that
+occur during the following program. You may assume that this is the only process that the CPU
+is executing.
 
--- Task 1.2 were implemented all this basic functions ( cd, mv, du, date, rev ) and one additional "art" command. To execute "art" command you should have .jpg file in derictory witch will be same as for shell-main.c (or type PATH to .jpg  like: /Users/username/myshellProj/burch.jpg). If you have problem just install (sudo port install jp2a) to your computer
 
--- Task 1.5 
+<h3>COMMENTS:<h3>
+
+<h4>Task 1.2<h4> 
+has implemented all of the basic functions (cd, mv, du, date, rev) as well as an additional "art" command. To execute the "art" command, you should have a .jpg file in the same directory as shell-main.c (or type the path to the .jpg file like /Users/username/myshellProj/myimg.jpg). If you encounter any issues, simply install jp2a to your computer using the command "sudo port install jp2a".
+
+<h4>Task 1.5<h4>
 - 1) Creating new processes in unix is achieved through the use of fork.When fork is called a duplicate of the current process is createdd with its own address space. This feature enables several tasks to run independently of one another, as if they had exclusive access to the machines full memory.
 Some instances where fork is commonly used:
 The shell utilizes fork to execute programs invoked from the command line.
